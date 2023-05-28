@@ -1,44 +1,57 @@
 const http = require('http');
+const routes = require('./routes.js');
+const { ro } = require('date-fns/locale');
 global.DEBUG = true;
 
 const server = http.createServer((req, res) => {
     if(DEBUG) console.log(req.url, req.method);
+    let path = './views/';
     switch(req.url) {
         case '/':
+            path += 'index.html';
             res.statusCode = 200;
-            res.end(`/ route was requested`)
+            routes.indexPage(path, res);
             break;
         case '/about':
             res.statusCode = 200;
-            res.end(`/about route was requested`)
+            path =+ 'about.html';
+            routes.aboutPage(path, res);
             break;
         case '/contact':
             res.statusCode = 200;
-            res.end(`/contact route was requested`)
+            path += 'contact.html';
+            routes.contactPage(path, res);
             break;
         case '/subscribe':
             res.statusCode = 200; 
-            res.end(`/subscribe route was requested`)  
+            path += 'subscribe.html';  
+            routes.subscribePage(path, res);
             break;
         case '/dogs':
             res.statusCode = 200;
-            res.end(`/dogs route was requested`)
+            path += 'dogs.html';
+            routes.dogsPage(path, res);
             break;
         case '/cats':
             res.statusCode = 200;
-            res.end(`/cats route was requested`)
+            path += 'cats.html';
+            routes.catsPage(path, res);
             break;
         case '/birds':
             res.statusCode = 200;
-            res.end(`/birds route was requested`)
+            path += 'birds.html';
+            routes.birdsPage(path, res);
             break;
         case '/hamsters':
             res.statusCode = 200;
-            res.end(`/hamsters route was requested`)
+            path += 'hamsters.html';
+            routes.hamstersPage(path, res);
             break;
         default:
             res.statusCode = 404;
-            res.end(`404: page not found`)
+            path += '404.html';
+            routes.FourOhFourPage(path, res);
+            break;
     }});
 
     server.listen(3000, 'localhost', () => {
