@@ -1,0 +1,12 @@
+{
+  "name": "fsqap2",
+  "version": "1.0.0",
+  "description": "QAP 2 for Full Stack JavaScript class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
