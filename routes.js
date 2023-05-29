@@ -1,41 +1,44 @@
+    // *********************************
+    // Filename: routes.js
+    // Author: Jonah Greening
+    // Purpose: routes code for the website
+    // Date: 05-28-23
+    // Date revised:
+    // **********************************
+
 const fs = require('fs');
 
-function indexPage(req, res) {
+function indexPage(path, res) {
     if(DEBUG) console.log(`index.html page was requested`);
     displayFile(path, res);
 }
 
-function aboutPage(req, res) {
-    if(DEBUG) console.log(`about.html page was requested`);
-    displayFile(path, res);
-}
-
-function contactPage(req, res) {    
+function contactPage(path, res) {    
     if(DEBUG) console.log(`contact.html page was requested`);
     displayFile(path, res);
 }
 
-function FourOhFourPage(req, res) {
+function FourOhFourPage(path, res) {
     if(DEBUG) console.log(`404.html page was requested`);
     displayFile(path, res);
 }
 
-function birdsPage(req, res) {
+function birdsPage(path, res) {
     if(DEBUG) console.log(`birds.html page was requested`);
     displayFile(path, res);
 }
 
-function catsPage(req, res) {
+function catsPage(path, res) {
     if(DEBUG) console.log(`cats.html page was requested`);
     displayFile(path, res);
 }
 
-function dogsPage(req, res) {    
+function dogsPage(path, res) {    
     if(DEBUG) console.log(`dogs.html page was requested`);
     displayFile(path, res);
 }
 
-function hamstersPage(req, res) {    
+function hamstersPage(path, res) {    
     if(DEBUG) console.log(`hamsters.html page was requested`);
     displayFile(path, res);
 }     
