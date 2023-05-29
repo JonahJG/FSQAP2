@@ -43,6 +43,27 @@ function hamstersPage(path, res) {
     displayFile(path, res);
 }     
 
+function stylePage (res) {
+    if (DEBUG) console.log(`style.css page was requested`);
+    styleSheet(res);
+}
+
+const styleSheet = (res) => {
+    fs.readFile('./views/styles/style.css', (err, data) => {
+        if(err) {
+            res.writeHead(404, {'Content-Type': 'text/plain'});
+            res.end("404 - File Not Found");
+        } else {
+            let contentType = "text/css";
+            res.writeHead(200, {'Content-Type': contentType});
+            res.end(data);    
+        }
+    });
+}
+
+
+
+
 function displayFile(path, res) {
     fs.readFile(path, (err, data) => {
         if(err) {
@@ -59,11 +80,11 @@ function displayFile(path, res) {
 
 module.exports = {  
     indexPage,  
-    aboutPage,
     contactPage,
     FourOhFourPage,
     birdsPage,
     catsPage,
     dogsPage,
-    hamstersPage    
-}
+    hamstersPage,  
+    stylePage, 
+};
