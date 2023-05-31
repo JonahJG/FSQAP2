@@ -1,0 +1,120 @@
+<!-- // *********************************
+// Filename: weather.html
+// Author: Jonah Greening
+// Purpose: Page to display weather information
+// Date: 05-28-23
+// Date revised:
+// ********************************** -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ab9ebccda2.js" crossorigin="anonymous"></script>
+    
+    <title>Weather</title>
+
+    <style>
+    /* CSS styles */
+
+    * {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav { 
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: linear-gradient(to right, #25947c, #3e3399);
+    border-radius: 5px;
+}
+
+.navA {
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    font-size: 14px;
+}
+
+.navA:hover {
+    color: #ff0303ad;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+i {
+    color: rgb(218, 218, 94);
+}
+
+#temperature, #humidity, #description {
+    padding-top: 20px;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    border: 5px solid rgb(218, 218, 94);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: azure;
+}
+
+p {
+    display: block;
+    border: 1px solid rgb(218, 218, 94);
+
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div id="nav">
+        <nav>
+            <a class="navA" href="/">Home</a>
+            <a class="navA" href="/contact">Contact</a>
+            <a class="navA" href="/weather">Weather</a>
+            <a class="navA" href="/stats">Statistics</a>
+            <a class="navA" href="/pets">Pets</a>
+        </nav>
+    </div>
+    
+    <!-- Heading -->
+    <h1>Weather Information: St. John's, NL <i class="fa-solid fa-cloud-sun"></i></h1>
+    
+    <!-- Temperature section -->
+    <div id="temperature">
+        <h2>Temperature</h2>
+        <!-- The temperature value will be inserted dynamically using server-side rendering -->
+        <p>{{temperature}}&deg;C</p>
+    </div>
+    
+    <!-- Humidity section -->
+    <div id="humidity">
+        <h2>Humidity</h2>
+        <!-- The humidity value will be inserted dynamically using server-side rendering -->
+        <p>{{humidity}}%</p>
+    </div>
+    
+    <!-- Description section -->
+    <div id="description">
+        <h2>Description</h2>
+        <!-- The weather description will be inserted dynamically using server-side rendering -->
+        <p>{{description}}</p>
+    </div>
+</body>
+</html>

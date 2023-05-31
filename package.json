@@ -11,6 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.30.0",
+    "newsapi": "^2.4.1",
+    "node-cron": "^3.0.2",
+    "node-stock-data": "^1.1.2",
+    "openweather-apis": "^4.5.0",
     "uuid": "^9.0.0"
   }
 }
