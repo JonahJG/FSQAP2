@@ -11,12 +11,18 @@ global.DEBUG = true;
 
 // Import required modules
 const http = require('http');
+const https = require('https');
 const fs = require('fs');
 const routes = require('./routes');
 const logEvents = require('./logEvents.js');
 const EventEmitter = require('events');
 class MyEmitter extends EventEmitter {}
 const myEmitter = new MyEmitter();
+myEmitter.on('log', (event, level, message) => logEvents(event, level, message));
+const NewsAPI = require('newsapi');
+const newsapi = new NewsAPI('2800f08ba8704caeba65131f887d77b0');
+const stockdata = require('node-stock-data');
+const cron = require('node-cron');
 
 // Log events handler
 myEmitter.on('log', (event, level, message) => logEvents(event, level, message));
