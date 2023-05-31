@@ -1,0 +1,26 @@
+1. How many hours did it take you to complete this assessment? (Please keep try to keep track of how many hours you have spent working on each individual part of this assessment as best you can - an estimation is fine; we just want a rough idea.)
+
+
+It took me roughly 15 hours to complete.
+
+
+2. What online resources you have used? (My lectures, YouTube, Stack overflow etc.)
+
+Class lectures, StackOverflow, w3schools.com, tutorialspoint.com
+
+
+3. Did you need to ask any of your friends in solving the problems. (If yes, please mention name of the friend. They must be amongst your class fellows.)
+
+
+Yes. I asked a question regarding styling and discussed it with Alex Singleton.
+
+
+4. Did you need to ask questions to any of your instructors? If so, how many questions did you ask (or how many help sessions did you require)?
+
+
+Yes, I asked a question regarding styling. Alex Singleton jumped in to help, though, and the topic ended up being something that we will learn later on.
+
+
+5. Rate (subjectively) the difficulty of each question from your own perspective, and whether you feel confident that you can solve a similar but different problem requiring some of the same techniques in the future now that you’ve completed this one.
+
+On a scale of 1-10 this project's difficulty was at about a 6/10. Some of the bonus content was a bit tricky to figure out, like setting up the promises for the API calls and making things asynchronous so that the multiple APIs I was using were working well together and not slowing down the webpage. Overall, I feel confident I could solve another similar problem to the ones presented to me through this QAP, though. The learning from this was pretty vital, I believe. 
