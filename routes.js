@@ -23,45 +23,20 @@ function FourOhFourPage(path, res) {
     displayFile(path, res);
 }
 
-function birdsPage(path, res) {
-    if(DEBUG) console.log(`birds.html page was requested`);
+function weatherPage(path, res) {
+    if(DEBUG) console.log(`weather.html page was requested`);
     displayFile(path, res);
 }
 
-function catsPage(path, res) {
-    if(DEBUG) console.log(`cats.html page was requested`);
+function statsPage(path, res) {
+    if(DEBUG) console.log(`stats.html page was requested`);
     displayFile(path, res);
-}
+}       
 
-function dogsPage(path, res) {    
-    if(DEBUG) console.log(`dogs.html page was requested`);
+function petsPage(path, res) {  
+    if(DEBUG) console.log(`pets.html page was requested`);
     displayFile(path, res);
-}
-
-function hamstersPage(path, res) {    
-    if(DEBUG) console.log(`hamsters.html page was requested`);
-    displayFile(path, res);
-}     
-
-function stylePage (res) {
-    if (DEBUG) console.log(`style.css page was requested`);
-    styleSheet(res);
-}
-
-const styleSheet = (res) => {
-    fs.readFile('./views/styles/style.css', (err, data) => {
-        if(err) {
-            res.writeHead(404, {'Content-Type': 'text/plain'});
-            res.end("404 - File Not Found");
-        } else {
-            let contentType = "text/css";
-            res.writeHead(200, {'Content-Type': contentType});
-            res.end(data);    
-        }
-    });
-}
-
-
+}   
 
 
 function displayFile(path, res) {
@@ -82,9 +57,7 @@ module.exports = {
     indexPage,  
     contactPage,
     FourOhFourPage,
-    birdsPage,
-    catsPage,
-    dogsPage,
-    hamstersPage,  
-    stylePage, 
+    weatherPage,
+    statsPage,
+    petsPage
 };

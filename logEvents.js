@@ -1,9 +1,3 @@
-const { format, getYear } = require('date-fns');
-const { v4: uuid } = require('uuid');
-const fs = require('fs');
-const fsPromises = require('fs').promises;
-const path = require('path');
-
     // *********************************
     // Filename: logEvents.js
     // Author: Jonah Greening
@@ -11,6 +5,12 @@ const path = require('path');
     // Date: 05-28-23
     // Date revised:
     // **********************************
+
+const { format, getYear } = require('date-fns');
+const { v4: uuid } = require('uuid');
+const fs = require('fs');
+const fsPromises = require('fs').promises;
+const path = require('path');
 
 const logEvents = async (event, level, message) => {
   const dateTime = `${format(new Date(), 'yyyy-MM-dd\HH:mm:ss')}`;
